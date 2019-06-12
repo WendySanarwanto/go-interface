@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 type englishBot struct {}
 type koreanBot struct {}
 
@@ -9,16 +7,8 @@ func main() {
 	eb := englishBot{}
 	kb := koreanBot{}
 
-	eb.printGreeting()
-	kb.printGreeting()
-}
-
-func (eb englishBot) printGreeting() {
-	fmt.Println(eb.getGreeting())
-}
-
-func (kb koreanBot) printGreeting() {
-	fmt.Println(kb.getGreeting())
+	printGreeting(eb)
+	printGreeting(kb)
 }
 
 func (eb englishBot) getGreeting() string {
